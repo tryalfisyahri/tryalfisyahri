@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage - Perpustakaan Try Alfi Syahri</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -158,6 +159,16 @@
     </style>
 </head>
 <body>
+    <script>
+        window.onload = function() {
+            Swal.fire({
+                title: "Selamat Datang!",
+                text: "Selamat datang di Perpustakaan Try Alfi Syahri. Temukan berbagai buku digital menarik di sini!",
+                icon: "success",
+                confirmButtonText: "Mulai Menjelajah"
+            });
+        };
+    </script>    
     <div style="position: fixed; bottom: 0px;left: 10px;width:130px;height:160px;"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitw15AaPnjyjXT9H3pcOPPzsD7h2EVW6PUzJeXY3mcPn5q4ZnjCCyNzpL0OKqj2bSo51TU7qYg_tzxm44lUaSMko5NB2P-X8rdd8tXc9aPLQPDWIWxfQqYU-fQHCtgpRpqOCX5X32toocg/s1600/halo.gif" /></div>
     <header>
         <div class="icon-container">
