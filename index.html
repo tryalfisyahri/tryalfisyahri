@@ -3,147 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Homepage - Perpustakaan Try Alfi Syahri</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
-            background-color: #dce3e7;
+            background-color: #d9dcd6;
+            color: #455a4f;
         }
-        header, footer {
-            background: #173963;
-            color: white;
+        header {
+            background-color: #455a4f;
+            color: #e7e8e3;
             padding: 15px;
+            text-align: center;
+            border-bottom: 3px solid #6e866e;
             position: relative;
         }
+        .icon-container {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        .icon-container img {
+            width: 60px;
+            height: 60px;
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
         nav {
-            background: #0C2340;
-            padding: 10px;
             position: absolute;
             top: 15px;
             right: 20px;
         }
-        nav a {
-            color: white;
-            margin: 0 10px;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        nav ul li a {
+            display: block;
+            padding: 10px 15px;
+            background-color: #e7e8e3;
+            color: #455a4f;
             text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #455a4f;
             font-weight: bold;
+            transition: all 0.3s ease-in-out;
         }
-        .container {
+        nav ul li a:hover {
+            background-color: #6e866e;
+            color: #e7e8e3;
+            transform: scale(1.1);
+        }
+        section {
             padding: 20px;
-        }
-        table {
-            border: 1px solid rgb(119, 169, 205);
-            border-collapse: collapse;
-            margin: auto;
-            padding: 10px;
-            background-color: #eceef0;
-        }
-        th, td {
-            border: 1px solid rgb(48, 43, 43);
-            padding: 10px;
-        }
-        form {
-            width: 50%;
-            margin: auto;
-            text-align: left;
-            background-color: #1d3552;
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-        }
-        input, textarea {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
+            margin: 20px;
+            background: #e7e8e3;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
         }
         footer {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
             text-align: center;
+            padding: 15px;
+            background-color: #455a4f;
+            color: #e7e8e3;
+            position: relative;
         }
+        .last-edited {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .last-edited img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .book-collection {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .book {
+            display: flex;
+            align-items: center;
+            background: #d9dcd6;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .book img {
+            width: 120px;
+            height: 170px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .book-info {
+            flex: 1;
+        }
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .book-author {
+            font-size: 14px;
+            color: #666;
+        }
+        .book-desc {
+            font-size: 14px;
+            color: #555;
+            margin: 10px 0;
+        }
+        .read-button {
+            display: inline-block;
+            padding: 8px 12px;
+            background: #6e866e;
+            color: #e7e8e3;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .read-button:hover {
+            background: #455a4f;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+            border: none;
+        }
+
     </style>
 </head>
 <body>
     <header>
+        <div class="icon-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Library Icon">
+        </div>
         <h1>Perpustakaan Try Alfi Syahri</h1>
         <nav>
-            <a href="#home" onclick="showSection('home')">Home</a>
-            <a href="#about" onclick="showSection('about')">About Me</a>
-            <a href="#contact" onclick="showSection('contact')">Contact Us</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
-    
-    <div class="container" id="home">
-        <h2>Selamat Datang di Perpustakaan Try Alfi Syahri</h2>
-        <p>Perpustakaan ini dibuat untuk memenuhi keperluan Mata Kuliah Pengembangan Web Perpustakaan.</p>
-        <a href="https://lib.ugm.ac.id/" target="_blank">Collaboration</a>
+
+    <section id="home">
+        <h2>Selamat Datang di Website Perpustakaan!</h2>
+        <p> 
+            Halo! Selamat datang di Perpustakaan Try Alfi Syahri. Website ini dibuat sebagai wadah untuk menyimpan, menampilkan, dan berbagi repository tugas-tugas dari Mata Kuliah Pengembangan Web Perpustakaan. 
+            
+            Di sini, kamu akan menemukan berbagai proyek menarik yang berhubungan dengan pengembangan sistem perpustakaan berbasis web. 
+            Website ini juga berfungsi sebagai portofolio pembelajaran, dimana setiap tugas yang diselesaikan akan tersimpan dan dapat diakses kembali untuk referensi atau pengembangan lebih lanjut.
+            Dengan adanya dokumentasi ini, diharapkan bisa membantu mahasiswa memahami bagaimana sebuah sistem perpustakaan online dikembangkan. 
+        </p>
+        <p> 
+            Selain itu, website ini bisa menjadi sumber inspirasi bagi siapa saja yang tertarik dengan dunia web development, terutama yang berfokus pada sistem informasi perpustakaan. 
+            Nantinya, website ini dapat terus dikembangkan dengan fitur-fitur tambahan agar lebih interaktif dan bermanfaat bagi pengguna.
+            Terima Kasih sudah berkunjung, semoga website ini bermanfaat! 📚</p>
+        
+    </section>
+
+    <section id="home">
+        <h3>Collaboration</h3>
+        <p>Perpustakaan Try Alfi Syahri bekerja sama dengan <a href="https://library.usu.ac.id/" target="_blank">Perpustakaan Universitas Sumatera Utara</a> untuk berbagi ilmu dan memperkenalkan teknologi perpustakaan digital.</p>
+    </section>
+
+    <section id="collection">
+        <h2><center>Koleksi Buku Digital</center></h2>
+        <p><center><input type="text" id="search" placeholder="Cari buku..." onkeyup="searchBook()"></center></p>
+        
+            <!-- Buku 1 -->
+            <div class="book">
+                <img src="https://i.pinimg.com/736x/8c/50/9a/8c509a91adca718140857ef57730f1d9.jpg" alt="Cover Buku 1">
+                <div class="book-info">
+                    <div class="book-title">Atomic Habits</div>
+                    <div class="book-author">James Clear</div>
+                    <div class="book-desc">Bagaimana perubahan kecil bisa membawa dampak besar dalam hidup? Dalam Atomic Habits, James Clear mengungkapkan cara membangun kebiasaan baik, menghilangkan kebiasaan buruk, dan menciptakan sistem yang efektif untuk mencapai kesuksesan jangka panjang.
+                        Buku ini menjelaskan bahwa kebiasaan adalah hasil dari proses kecil yang berulang setiap hari. Dengan menerapkan The Four Laws of Behavior Change membuat kebiasaan lebih jelas, menarik, mudah, dan memuaskan.
+                        kita dapat membentuk pola hidup yang lebih produktif dan positif. 
+                        Clear juga menekankan pentingnya perubahan identitas dalam membangun kebiasaan, yaitu dengan berfokus pada siapa kita ingin menjadi, bukan hanya pada hasil yang ingin dicapai. 
+                        Dengan pendekatan berbasis ilmu psikologi dan neuroscience, serta contoh nyata dari atlet, pengusaha, dan orang sukses lainnya, Atomic Habits memberikan panduan praktis bagi siapa saja yang ingin meningkatkan kualitas hidup melalui kebiasaan kecil yang konsisten.</div>
+                    <a href="https://drive.google.com/file/d/1U6uQfMpELtCyMYS8gz0qQzS9SgwI8JrJ/view?usp=drivesdk" class="read-button" target="Google Drive-Viewer">Baca Sekarang</a></div>
+            </div>
+        
+            <!-- Buku 2 -->
+            <div class="book">
+                <img src="https://i.pinimg.com/736x/6b/3a/01/6b3a010fb037d130bd5e13df3c1ba18b.jpg" alt="Cover Buku 2">
+                <div class="book-info">
+                    <div class="book-title">Filosofi Teras</div>
+                    <div class="book-author">Henry Manampiring</div>
+                    <div class="book-desc">Dalam Filosofi Teras, Henry Manampiring memperkenalkan filsafat Stoisisme, ajaran bijak dari zaman Yunani-Romawi yang masih relevan untuk kehidupan saat ini.
+                        Stoisisme mengajarkan kita untuk fokus pada hal-hal yang bisa kita kendalikan dan menerima dengan tenang apa yang berada di luar kendali kita. Dengan prinsip-prinsip seperti dikotomi kendali, latihan mental, dan perspektif terhadap kebahagiaan, buku ini membantu pembaca menghadapi tantangan hidup dengan lebih rasional dan tenang.
+                        Ditulis dengan gaya ringan dan disertai contoh kehidupan sehari-hari, Filosofi Teras cocok bagi siapa saja yang ingin menjalani hidup dengan lebih damai, bebas dari kecemasan berlebihan, dan lebih fokus pada hal-hal yang benar-benar penting.</div>
+                    <a href="https://drive.google.com/file/d/1XfoQ_WLQ87nG8lnFZXVDmQA9pScEFoAs/view?usp=drivesdk" class="read-button" target="Google Drive-Viewer">Baca Sekarang</a></div>
+            </div>
+
+            <!-- Buku 3 -->
+            <div class="book">
+                <img src="https://i.pinimg.com/1200x/fe/ea/b7/feeab7b37152f25ecf2d8b0effb69f28.jpg" alt="Cover Buku 3">
+                <div class="book-info">
+                    <div class="book-title">Sejarah Dunia yang Disembunyikan</div>
+                    <div class="book-author">Jonathan Black</div>
+                    <div class="book-desc">Apa yang sebenarnya terjadi di balik peristiwa-peristiwa besar dalam sejarah dunia? Dalam Sejarah Dunia yang Disembunyikan, Jonathan Black mengajak pembaca melihat sejarah dari perspektif yang berbeda, mengungkap berbagai teori alternatif tentang asal-usul peradaban, peran organisasi rahasia, serta pengaruh mistisisme dan esoterisme dalam perjalanan umat manusia.
+                        Buku ini mengeksplorasi bagaimana kelompok-kelompok seperti Freemason, Illuminati, dan aliran-aliran spiritual tertentu diyakini memiliki pengaruh besar terhadap politik, sains, dan budaya dunia. 
+                        Dengan pendekatan yang memadukan sejarah, filsafat, dan teori konspirasi, Jonathan Black menyajikan narasi yang menggugah rasa ingin tahu dan mendorong pembaca untuk mempertanyakan apa yang selama ini dianggap sebagai kebenaran sejarah.</div>
+                    <a href="https://drive.google.com/file/d/1XfoQ_WLQ87nG8lnFZXVDmQA9pScEFoAs/view?usp=drivesdk" class="read-button" target="Google Drive-Viewer">Baca Sekarang</a></div>
+            </div>
+        
+            <!-- Buku 4 -->
+            <div class="book">
+                <img src="https://i.pinimg.com/736x/9a/bb/61/9abb61fcf68afd124375a82dfd02ca6a.jpg" alt="Cover Buku 4">
+                <div class="book-info">
+                    <div class="book-title">Laut Bercerita</div>
+                    <div class="book-author">Leila S. Chudori</div>
+                    <div class="book-desc">Di era rezim Orde Baru, di tengah penindasan dan ketakutan, Laut Bercerita mengisahkan perjuangan, persahabatan, dan kehilangan melalui sudut pandang Biru Laut, seorang aktivis mahasiswa yang berjuang melawan ketidakadilan di Indonesia tahun 1990-an. Bersama kawan-kawannya, Laut terlibat dalam gerakan bawah tanah yang memperjuangkan kebebasan berbicara dan hak asasi manusia. 
+                        Namun, idealismenya harus dibayar mahal ketika ia diculik dan mengalami penyiksaan brutal oleh aparat negara.</div>
+                    <a href="https://drive.google.com/file/d/1d337qR1BBp2b8oGhb1C9ft7Fn6madrJs/view?usp=drivesdk" class="read-button" target="Google Drive-Viewer">Baca Sekarang</a></div>
+            </div>
+
+            <!-- Buku 5 -->
+            <div class="book">
+                <img src="https://i.pinimg.com/736x/e2/1b/43/e21b43796903145c4ed9527f1ebb3f4a.jpg" alt="Cover Buku 5">
+                <div class="book-info">
+                    <div class="book-title">Pulang</div>
+                    <div class="book-author">Leila S. Chudori</div>
+                    <div class="book-desc">Buku Pulang karya Leila S. Chudori mengisahkan tentang para eksil politik Indonesia yang terpaksa hidup di pengasingan akibat peristiwa G30S 1965. Novel ini berpusat pada Dimas Suryo, seorang jurnalis yang harus meninggalkan tanah airnya setelah rezim Orde Baru berkuasa. 
+                        Bersama rekan-rekannya, ia terdampar di Paris dan berusaha membangun kehidupan baru, meski dihantui rasa rindu akan Indonesia yang tak bisa ia kunjungi.
+                        Di sisi lain, cerita juga mengikuti perjalanan Lintang Utara, putri Dimas, yang tumbuh besar di Prancis dan berusaha memahami akar sejarah keluarganya. 
+                        Ketika ia mendapatkan kesempatan untuk kembali ke Indonesia, ia dihadapkan pada kenyataan yang kompleks tentang negara yang ayahnya tinggalkan dan sejarah yang selama ini disembunyikan.</div>
+                    <a href="https://drive.google.com/file/d/1e3xSFjFrsF8VWaFaRRqdTKC1Jn5zpYzs/view?usp=drivesdk" class="read-button" target="Google Drive-Viewer">Baca Sekarang</a></div>
+            </div>
+
+            <!-- Tempat menampilkan PDF -->
+            <iframe name="pdf-viewer"></iframe>
+        </div>
+    </section>
+
+    <script>
+        function searchBook() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let books = document.querySelectorAll(".book");
+            books.forEach(book => {
+                let title = book.getAttribute("data-title").toLowerCase();
+                if (title.includes(input)) {
+                    book.style.display = "block";
+                } else {
+                    book.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+    <div class="last-edited">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828765.png" alt="Clock Icon">
+        <span id="last-edited"></span>
     </div>
     
-    <div class="container" id="about" style="display: none;">
-        <h2>About Me</h2>
-        <table>
-            <tr><th>Nama</th><td>Try Alfi Syahri</td></tr>
-            <tr><th>NIM</th><td>220709040</td></tr>
-            <tr><th>E-mail</th><td>tryalfisyahri01@gmail.com</td></tr>
-            <tr><th>Angkatan</th><td>2022</td></tr>
-            <tr><th>Fakultas</th><td>Ilmu Budaya</td></tr>
-            <tr><th>Program Studi</th><td>Perpustakaan dan Sains Informasi</td></tr>
-            <tr><th>Universitas</th><td>Sumatera Utara</td></tr>
-            <tr><th>Media Sosial</th><td><a href="https://www.instagram.com/shyraltry">Instagram</a></td></tr>
-        </table>
-    </div>
-    
-    <div class="container" id="contact" style="display: none;">
-        <h2>Formulir Kritik dan Saran</h2>
-        <table>
-            <tr>
-                <th>Kategori</th>
-                <th>Detail</th>
-            </tr>
-            <tr>
-                <td>Nama</td>
-                <td><input type="text" placeholder="Masukkan Nama Anda"></td>
-            </tr>
-            <tr>
-                <td>E-mail</td>
-                <td><input type="email" placeholder="Masukkan E-mail Anda"></td>
-            </tr>
-            <tr>
-                <td>Jenis Pengaduan</td>
-                <td>
-                    <select>
-                        <option>Pilih Jenis</option>
-                        <option>Kritik</option>
-                        <option>Saran</option>
-                        <option>Keluhan</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Pesan</td>
-                <td><textarea placeholder="Tulis Pesan Anda" rows="4"></textarea></td>
-            </tr>
-        </table>
-        <br>
-        <button class="submit-btn">Kirim</button>
-    </div>
-    
-    
+    <script>// Menampilkan waktu terakhir kali halaman dimuat dengan ikon berputar
+    document.getElementById("last-edited").textContent = "Terakhir Diedit: " + new Date().toLocaleString("id-ID");
+    </script>
+
     <footer>
         <p>&copy; 2025 Perpustakaan Try Alfi Syahri</p>
     </footer>
-    
-    <script>
-        function showSection(sectionId) {
-            document.getElementById('home').style.display = 'none';
-            document.getElementById('about').style.display = 'none';
-            document.getElementById('contact').style.display = 'none';
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
+
+    <div style="position: fixed; bottom: 10px; left: 10px; width: 130px; height: 160px;">
+        <a href="http://www.cakrawaladunia.com/" target="_blank">
+            <img border="0" src="http://s.myniceprofile.com/myspacepic/212/th/21215.gif" title="My widget" alt="animasi bergerak gif" />
+        </a>
+    </div>
 </body>
 </html>
