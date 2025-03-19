@@ -9,11 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #d9dcd6;
-            color: #455a4f;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            background: linear-gradient(270deg, #e7e8e3, #d9dcd6, #6e8682,#455a4f);
+            background-size: 400% 400%;
+            animation: gradientFlash 6s ease infinite;
+            color: #244747;
+	}
+        @keyframes gradientFlash {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         header {
             background-color: #455a4f;
@@ -153,4 +157,3 @@
 
 </body>
 </html>
-
