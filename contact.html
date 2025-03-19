@@ -23,24 +23,36 @@ header {
     border-bottom: 3px solid #80755d;
     position: relative;
 }
-
+.icon-container {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);    
+}
+.icon-container img {
+    width: 60px;
+    height: 60px;
+    animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
 nav {
     position: absolute;
     top: 15px;
     right: 20px;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 nav ul li {
     display: inline-block;
     margin-left: 15px;
 }
-
 nav ul li a {
     display: block;
     padding: 10px 15px;
@@ -52,12 +64,10 @@ nav ul li a {
     font-weight: bold;
     transition: background 0.3s ease, color 0.3s ease;
 }
-
 nav ul li a:hover {
     background: #ccbfae;
     color: #4c4a3a;
 }
-
 section {
     padding: 20px;
     margin: 20px;
@@ -72,13 +82,11 @@ table {
     border-collapse: collapse;
     margin-top: 10px;
 }
-
 table, th, td {
     border: 1px solid #4c4a3a;
     padding: 10px;
     text-align: left;
 }
-
 th {
     background: #4c4a3a;
     color: white;
@@ -106,25 +114,6 @@ footer {
     background: #4c4a3a;
     color: #e2ddd5;
 }
-
-/* Gaya untuk animasi buku */
-.icon-container {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    width: 130px;
-    height: 160px;
-}
-
-.icon-container-top {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: auto;
-    z-index: 1000;
-}
-
 @keyframes gradientFlash {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -208,4 +197,3 @@ footer {
     <div style="position: fixed; bottom: 0px;left: 10px;width:100px;height:160px;"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigMzkr-nFohGuoaVLo27tsxpjS6CiXmC4p6aWmLj1_WI3wAkgaS6L3O4k0zNk8mu44l7kEtNrkqK8dZ2dYjxJC9Y6kd71frSGZhe9gFizthV6fgm_Q3jry9gPaCN1eHoz_BUraoT3WQxFN/s1600/bunga.gif" /></div>
 </body>
 </html>
-
