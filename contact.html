@@ -6,21 +6,25 @@
     <title>Contact Us - Perpustakaan Try Alfi Syahri</title>
     <style>
     body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(270deg, #ccbfae, #ccbfae, #e2ddd5, #80755d, #4c4a3a);
-    background-size: 400% 400%;
-    animation: gradientFlash 6s ease infinite;
-    color: #2c2c2c;
+    	font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(270deg, #e7e8e3, #d9dcd6, #6e8682,#455a4f);
+        background-size: 400% 400%;
+        animation: gradientFlash 6s ease infinite;
+        color: #244747;
 }
-
+        @keyframes gradientFlash {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+}
 header {
-    background: linear-gradient(90deg, #4c4a3a, #80755d);
-    color: #e2ddd5;
+    background-color: #455a4f;
+    color: #e7e8e3;
     padding: 15px;
     text-align: center;
-    border-bottom: 3px solid #80755d;
+    border-bottom: 3px solid #6e866e;
     position: relative;
 }
 .icon-container {
@@ -56,22 +60,22 @@ nav ul li {
 nav ul li a {
     display: block;
     padding: 10px 15px;
-    background: #80755d;
-    color: #fff;
+    background: #e7e8e3;
+    color: #455a4f;
     text-decoration: none;
     border-radius: 5px;
-    border: 2px solid #80755d;
+    border: 2px solid #455a4f;
     font-weight: bold;
     transition: background 0.3s ease, color 0.3s ease;
 }
 nav ul li a:hover {
-    background: #ccbfae;
-    color: #4c4a3a;
+    background: #6e866e;
+    color: #e7e8e3;
 }
 section {
     padding: 20px;
     margin: 20px;
-    background: #e2ddd5;
+    background: #e7e8e3;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: justify;
@@ -83,18 +87,18 @@ table {
     margin-top: 10px;
 }
 table, th, td {
-    border: 1px solid #4c4a3a;
+    border: 1px solid #6e8682;
     padding: 10px;
     text-align: left;
 }
 th {
-    background: #4c4a3a;
-    color: white;
+    background: #455a4f;
+    color: #d9dcd6;
 }
 
 button {
-    background: #80755d;
-    color: #e2ddd5;
+    background: #6e866e;
+    color: #d9dcd6;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -104,15 +108,15 @@ button {
 }
 
 button:hover {
-    background: #ccbfae;
-    color: #4c4a3a;
+    background: #455a4f;
+    color: #e7e8e3;
 }
 
 footer {
     text-align: center;
     padding: 15px;
-    background: #4c4a3a;
-    color: #e2ddd5;
+    background: #455a4f;
+    color: #e7e8e3;
 }
 @keyframes gradientFlash {
     0% { background-position: 0% 50%; }
