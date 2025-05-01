@@ -45,22 +45,28 @@
             50% { transform: translateY(-8px); }
             100% { transform: translateY(0); }
         }
-        nav {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: flex;
-            margin-left: 15px;
-        }
-        nav ul li a {
-            display: flex;
+       <nav>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Fitur
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="tabel pintar.php">Tabel Pintar</a></li>
+                <li><a class="dropdown-item" href="formulir.php">Form</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
             padding: 10px 15px;
             background-color: #e7e8e3;
             color: #455a4f;
