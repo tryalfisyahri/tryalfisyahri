@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - Perpustakaan Try Alfi Syahri</title>
+    <title>Homepage | Perpustakaan Try Alfi Syahri</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link ke Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Link ke file CSS custom jika ada -->
+    <link rel="stylesheet" href="style.css">
     <style>
-       body {
-    font-family: Arial, sans-serif;
+    body {
+    font-family: Segoe UI, sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(270deg, #e7e8e3, #d9dcd6, #6e8682, #455a4f);
     background-size: 400% 400%;
     animation: gradientFlash 6s ease infinite;
-    color: #244747;
+    color: #455a4f;
 }
 @keyframes gradientFlash {
     0% { background-position: 0% 50%; }
@@ -44,42 +49,12 @@
             50% { transform: translateY(-8px); }
             100% { transform: translateY(0); }
         }
-        nav {
-            position: absolute;
-            top: 3px;
-            right: 3px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline-block;
-            margin-left: 5px;
-        }
-        nav ul li a {
-            display: block;
-            padding: 5px 5px;
-            background-color: #e7e8e3;
-            color: #455a4f;
-            text-decoration: none;
-            border-radius: 5px;
-            border: 2px solid #455a4f;
-            font-weight: bold;
-            transition: all 0.3s ease-in-out;
-        }
-        nav ul li a:hover {
-            background-color: #6e866e;
-            color: #e7e8e3;
-            transform: scale(1.1);
-        }
         section {
             padding: 20px;
             margin: 20px;
             background: #e7e8e3;
             border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(31, 89, 30, 0.1);
             text-align: justify;
         }
         footer {
@@ -171,23 +146,34 @@
     </script>    
     <div style="position: fixed; bottom: 0px;left: 10px;width:130px;height:160px;"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitw15AaPnjyjXT9H3pcOPPzsD7h2EVW6PUzJeXY3mcPn5q4ZnjCCyNzpL0OKqj2bSo51TU7qYg_tzxm44lUaSMko5NB2P-X8rdd8tXc9aPLQPDWIWxfQqYU-fQHCtgpRpqOCX5X32toocg/s1600/halo.gif" /></div>
     <header>
-        <div class="icon-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Library Icon">
-        </div>
-        <h1>Perpustakaan Try Alfi Syahri</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-		<li><a href="tabel pintar.php">Tabel X</a></li>
-		<li><a href="formulir.php">Form</a></li>    
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg" style="background-color: #455a4f;">
+        <div class="container-fluid">
+              <a class="navbar-brand fw-bold" href="#">📚 Perpustakaan Try Alfi Syahri</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                      Lainnya
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="tabel.php">Tabel Perkalian (PHP)</a></li>
+                      <li><a class="dropdown-item" href="form_pengunjung.php">Form Pengunjung (PHP)</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>          
     </header>
 
     <section id="home">
-        <h2>Selamat Datang di Website Perpustakaan!</h2>
+        <h4><b>Selamat Datang di Website Perpustakaan!</b></h4>
         <p> 
             Halo! Selamat datang di Perpustakaan Try Alfi Syahri. Website ini dibuat sebagai wadah untuk menyimpan, menampilkan, dan berbagi repository tugas-tugas dari Mata Kuliah Pengembangan Web Perpustakaan. 
             
@@ -200,14 +186,14 @@
             Terima Kasih sudah berkunjung, semoga website ini bermanfaat! 📚</p></section>
 
     <section id="home">
-        <h3>Collaboration</h3>
+        <h4><b>Collaboration</b></h4>
         <p>Perpustakaan Try Alfi Syahri bekerja sama dengan <a href="https://library.usu.ac.id/" target="_blank">Perpustakaan Universitas Sumatera Utara</a> untuk berbagi ilmu dan memperkenalkan teknologi perpustakaan digital.</p>
     </section>
 
     <section id="collection">
-        <h2><center>Koleksi Buku Digital</center></h2>
-        <p><center><input type="text" id="search" placeholder="Cari buku..." onkeyup="searchBook()"></center></p>
-        
+        <h4><center><b>Koleksi Buku Digital</b></center></h4>
+        <input type="text" id="searchInput" class="form-control mb-3" placeholder="Cari judul buku...">
+        <div class="section" id="koleksi">        
             <!-- Buku 1 -->
             <div class="book">
                 <img src="https://i.pinimg.com/736x/8c/50/9a/8c509a91adca718140857ef57730f1d9.jpg" alt="Cover Buku 1">
@@ -270,56 +256,77 @@
                     <a href="https://drive.google.com/file/d/1e3xSFjFrsF8VWaFaRRqdTKC1Jn5zpYzs/view?usp=drivesdk" class="read-button" target="Google Drive-Viewer">Baca Sekarang</a></div>
             </div></section>
 	
-<section id="event-perpustakaan" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">📅 Event Perpustakaan</h2>
-
-      <div class="row g-4">
-
-        <!-- Event 1 -->
-        <div class="col-md-6">
-          <div class="card h-100 border-start border-primary border-4 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Bedah Buku "Laut Bercerita"</h5>
-              <p class="card-text">
-                <strong>Tanggal:</strong> 10 Mei 2025<br>
-                <strong>Waktu:</strong> 10.00 - 12.00 WIB<br>
-                <strong>Tempat:</strong> Ruang Baca Utama
-              </p>
-              <p class="card-text">Diskusi seru bersama penulis dan pecinta sastra. Terbuka untuk umum!</p>
-            </div>
-
-        <!-- Event 2 -->
-        <div class="col-md-6">
-          <div class="card h-100 border-start border-success border-4 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title text-success">Workshop Literasi Digital</h5>
-              <p class="card-text">
-                <strong>Tanggal:</strong> 17 Mei 2025<br>
-                <strong>Waktu:</strong> 13.00 - 15.00 WIB<br>
-                <strong>Tempat:</strong> Lab Komputer
-              </p>
-              <p class="card-text">Belajar mengelola informasi digital secara efektif. Gratis dan dapat sertifikat!</p>
-	</div></section>
+            <section id="event" class="py-5" style="background: linear-gradient(to right, #d9dcd6,);">
+                <div class="container">
+                  <h4 class="mb-4 text-gray fw-bold">Event Terbaru</h4>
+                  <div class="row g-4">
+              
+                    <!-- Event Card 1 -->
+                    <div class="col-md-6">
+                      <div class="card text-mint h-100" style="background-color: #FFF; border: 1px solid #d9dcd6;">
+                        <div class="card-body">
+                          <h5 class="card-title text-success">Workshop</h5>
+                          <div class="mb-3 d-flex justify-content-center">
+                            <div style="max-width:100%; width:100%;">
+                              <blockquote class="instagram-media"
+                                data-instgrm-permalink="https://www.instagram.com/p/DI0hU_mRdOk/?img_index=1&igsh=MW95ZjVlcDFuM3JxZw=="
+                                data-instgrm-version="14"
+                                style="background:#FFF; border:0; margin:0 auto; padding:0; width:100%; max-width:400px;">
+                              </blockquote>
+                            </div>
+                          </div>
+                          <p class="card-text">Workshop yang bertemakan How to Publish Journal Article with Speaker Dr. Lim Khee Hiang.</p>
+                          <p class="card-text"><small class="text-dark">08 Mei 2025</small></p>
+                          <a href="https://www.instagram.com/p/DI0hU_mRdOk/?img_index=1&igsh=MW95ZjVlcDFuM3JxZw==" target="_blank" class="btn btn-outline-success">Lihat Event</a>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Event Card 2 -->
+                    <div class="col-md-6">
+                      <div class="card text-mint h-100" style="background-color: #FFF; border: 1px solid #d9dcd6;">
+                        <div class="card-body">
+                          <h5 class="card-title text-success">Workshop Perpustakaan ITS 2025</h5>
+                          <div class="mb-3 d-flex justify-content-center">
+                            <div style="max-width:100%; width:100%;">
+                              <blockquote class="instagram-media"
+                                data-instgrm-permalink="https://www.instagram.com/p/DJQRWsBSoxM/?igsh=OGUwdjZ3M2xtbTZ6"
+                                data-instgrm-version="14"
+                                style="background:#FFF; border:0; margin:0 auto; padding:0; width:100%; max-width:400px;">
+                              </blockquote>
+                            </div>
+                          </div>
+                          <p class="card-text">Hybrid Workshop "Strategi Akses dan Publikasi Bersama Springer Nature" untuk mendukung kegiatan akademik dan penelitian seluruh Sivitas Akademika ITS.</p>
+                          <p class="card-text"><small class="text-dark">09 Mei 2025</small></p>
+                          <a href="https://www.instagram.com/p/DJQRWsBSoxM/?igsh=OGUwdjZ3M2xtbTZ6" target="_blank" class="btn btn-outline-success">Lihat Event</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
 		  
-    <script>
-        function searchBook() {
-            let input = document.getElementById("search").value.toLowerCase();
-            let books = document.querySelectorAll(".book");
-            books.forEach(book => {
-                let title = book.getAttribute("data-title").toLowerCase();
-                if (title.includes(input)) {
-                    book.style.display = "block";
-                } else {
-                    book.style.display = "none";
-                }
-            });
-        }
-    </script>
+              <script>
+                document.getElementById('searchInput').addEventListener('input', function() {
+                    const searchQuery = this.value.toLowerCase();
+                    const books = document.querySelectorAll('.book');
+            
+                    books.forEach(book => {
+                        const title = book.querySelector('.book-title').textContent.toLowerCase();
+                        const author = book.querySelector('.book-author').textContent.toLowerCase();
+            
+                        if (title.includes(searchQuery) || author.includes(searchQuery)) {
+                            book.style.display = 'flex';
+                        } else {
+                            book.style.display = 'none';
+                        }
+                    });
+                });
+            </script>            
 
     <div class="last-edited">
     <img src="https://cdn-icons-png.flaticon.com/512/1828/1828765.png" alt="Clock Icon">
-    <span>Terakhir Diedit: 18 Maret 2025, 14:30 WIB</span></div>
+    <span>Terakhir Diedit: 13 Mei 2025, 14:30 WIB</span></div>
     
     <script>// Menampilkan waktu terakhir kali halaman dimuat dengan ikon berputar
     document.getElementById("last-edited").textContent = "Terakhir Diedit: " + new Date().toLocaleString("id-ID");
@@ -328,5 +335,7 @@
     <footer>
         <p>&copy; 2025 Perpustakaan Try Alfi Syahri</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
