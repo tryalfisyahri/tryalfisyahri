@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak | Perpustakaan Try Alfi Syahri</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="Website Perpustakaan Try Alfi Syahri – Menyediakan koleksi, repository, dan event untuk pengembangan ilmu.">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lucida Bright', sans-serif;
+    }  
+    .navbar {
+      background-color: #8b0000;
+      border-bottom: 1px solid #f5f5dc;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #f5f5dc !important;
+    }
+    .navbar-nav .nav-link {
+      color: #f5f5dc;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+    .search-box input {
+      border: 1px solid #8b0000;
+      border-radius: 4px;
+      padding: 5px;
+    }
+    .search-box button {
+      background-color: #f5f5dc;
+      color: #8b0000;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin-left: 5px;  
+    }  
+    .search-box {
+      margin-right: 10px;  
+    }
+    .dropdown-menu a {
+      color: #8b0000;
+    }
+    .dropdown-menu a:hover {
+      background-color: #f5f5dc;
+    }
+    .dark-mode {
+      background-color: #535353;
+      color: #f5f5f5;
+    }
+    .dark-mode .navbar,
+    .dark-mode footer {
+      background-color: #535353;
+      color: #f5f5f5;
+    }
+    .dark-mode .navbar .nav-link,
+    .dark-mode .navbar-brand,
+    .dark-mode footer a {
+      color: #f5f5f5 !important;
+    }
+    .dark-mode section {
+      background-color: #a3a3a3; 
+      color: #ddd;  
+    }
+    section {
+      padding: 60px;
+      margin: 20px 20px 60px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      text-align: justify;  
+    }  
+    .hero-section {
+       position: relative;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #f5f5dc;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-image: url('https://i.pinimg.com/736x/d8/e3/be/d8e3be196afcdb2aad678d11e2e19674.jpg'); /* Gambar pertama */
+      z-index: 0;
+      filter: brightness(30%) blur(5px); /* Mengurangi kecerahan dan memberi efek blur */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 15px;
+    }
+    .overlay-dark {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0; 
+    }
+    .comment, .reply {
+      margin-bottom: 1rem;
+    }
+    .reply {
+      margin-left: 20px;
+      padding-left: 10px;
+      border-left: 2px solid #ddd;
+    }
+    footer {
+      background-color: #8b0000;
+      color: #f5f5dc;
+    }  
+    footer {
+      font-family: 'Lucida Bright', sans-serif;
+      line-height: 1.6;
+    }  
+    footer a img:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    }
+    footer h5 {
+      font-size: 1.125rem; /* setara ~18px */
+      font-weight: 600;
+    }
+    footer p,
+    footer li,
+    footer a {
+      font-size: 0.9rem; /* setara ~14-15px */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Perpustakaan Try Alfi Syahri</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Layanan</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="ebook.html">Koleksi</a></li>
+            <li><a class="dropdown-item" href="forum.html">Forum Diskusi</a></li>
+            <li><a class="dropdown-item" href="repository.html">Repository</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+      </ul>
+      <form class="d-flex search-box">
+        <input class="form-control form-control-sm" type="search" placeholder="Search..." aria-label="Search">
+        <button class="btn btn-sm btn-outline-light" type="submit">Go</button>
+        <button id="darkToggle" class="btn btn-sm btn-outline-light ms-2" type="button" title="Dark Mode">🌙</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h3 class="display-5">Forum Diskusi</h3>
+    <p class="lead">Bergabung lah dalam diskusi untuk saling berdialog dan bertukar informasi</p>
+  </div>
+</section>
+
+<!-- Forum Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center text-primary mb-4">Forum Diskusi</h3>
+
+    <div class="card p-4 shadow-sm">
+      <div id="user-section" class="mb-3 d-flex justify-content-between align-items-center">
+        <span id="user-info" class="fw-semibold text-primary"></span>
+        <button class="btn btn-sm btn-danger" onclick="logoutUser()">Logout</button>
+      </div>
+
+      <form onsubmit="submitComment(event)">
+        <div class="mb-3">
+          <textarea id="commentText" class="form-control" placeholder="Tulis komentar..." rows="3" required></textarea>
+        </div>
+        <div class="text-end">
+          <button class="btn btn-kirim">Kirim Komentar</button>
+        </div>
+      </form>
+
+      <div class="mt-4 row g-3 align-items-center justify-content-between">
+        <div class="col-md-auto">
+          <label for="filterSelect" class="form-label mb-0 me-2">Urutkan:</label>
+          <select id="filterSelect" onchange="renderComments()" class="form-select d-inline-block w-auto">
+            <option value="newest">Terbaru</option>
+            <option value="popular">Terpopuler</option>
+          </select>
+        </div>
+        <div class="col-md-auto">
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-outline-secondary btn-sm" onclick="prevPage()">Sebelumnya</button>
+            <span id="page-info" class="fw-semibold"></span>
+            <button class="btn btn-outline-secondary btn-sm" onclick="nextPage()">Berikutnya</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="comments" class="mt-4"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row text-light">
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Link Terkait</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://doaj.org/" target="_blank" class="text-decoration-none text-light">DOAJ</a></li>
+          <li><a href="https://onesearch.id" target="_blank" class="text-decoration-none text-light">Indonesia OneSearch</a></li>
+          <li><a href="https://garuda.kemdikbud.go.id" target="_blank" class="text-decoration-none text-light">Garuda Kemdikbud</a></li>
+          <li><a href="https://perpusnas.go.id" target="_blank" class="text-decoration-none text-light">Perpustakaan Nasional</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Kolaborasi</h5>
+        <p>Perpustakaan Try Alfi Syahri bekerja sama dengan Perpustakaan UGM untuk berbagi ilmu dan teknologi digital.</p>
+        <a href="https://lib.ugm.ac.id/" target="_blank" class="btn btn-outline-light btn-sm">Telusuri</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Follow Us</h5>
+        <div class="d-flex justify-content-start gap-3">
+          <a href="https://instagram.com/shyraltry"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" width="24"></a>
+          <a href="https://tiktok.com/@smusthappy"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="24"></a>
+          <a href="https://twitter.com/@numbpeo"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" width="24"></a>
+          <a href="https://youtube.com/@tryalfisyahri7922"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="24"></a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-light my-4">
+    <div class="text-center">
+      <small>&copy; 2025 Perpustakaan Try Alfi Syahri. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Dark Mode Toggle
+  document.getElementById("darkToggle").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+
+  let userName = "Pengguna";
+  let comments = [];
+  let currentPage = 1;
+  const commentsPerPage = 5;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    userName = prompt("Masukkan nama Anda:", "Pengguna") || "Pengguna";
+    document.getElementById("user-info").textContent = "Selamat datang, " + userName + "!";
+    renderComments();
+  });
+  function logoutUser() {
+    location.reload();
+  }
+  function submitComment(event) {
+    event.preventDefault();
+    const text = document.getElementById("commentText").value.trim();
+    if (text) {
+      comments.unshift({ user: userName, text, likes: 0, replies: [] });
+      document.getElementById("commentText").value = "";
+      renderComments();
+    }
+  }
+  function renderComments() {
+    const container = document.getElementById("comments");
+    container.innerHTML = "";
+    const filter = document.getElementById("filterSelect").value;
+
+    let sortedComments = [...comments];
+    if (filter === "popular") {
+      sortedComments.sort((a, b) => b.likes - a.likes);
+    }
+    const start = (currentPage - 1) * commentsPerPage;
+    const end = start + commentsPerPage;
+    const pageComments = sortedComments.slice(start, end);
+
+    pageComments.forEach((comment, index) => {
+      const commentEl = document.createElement("div");
+      commentEl.className = "comment";
+      commentEl.innerHTML = `
+        <p><strong>${comment.user}:</strong> ${comment.text}</p>
+        <button class="btn btn-sm btn-outline-primary me-2" onclick="likeComment(${start + index})">Suka (${comment.likes})</button>
+        <button class="btn btn-sm btn-outline-secondary me-2" onclick="replyComment(${start + index})">Balas</button>
+        <button class="btn btn-sm btn-outline-danger" onclick="deleteComment(${start + index})">Hapus</button>
+        <div class="mt-2">${comment.replies.map(reply => `<div class="reply"><strong>${reply.user}:</strong> ${reply.text}</div>`).join("")}</div>
+      `;
+      container.appendChild(commentEl);
+    });
+
+    document.getElementById("page-info").textContent = `Halaman ${currentPage} dari ${Math.ceil(comments.length / commentsPerPage)}`;
+  }
+  function likeComment(index) {
+    comments[index].likes++;
+    renderComments();
+  }
+  function replyComment(index) {
+    const replyText = prompt("Balasan:");
+    if (replyText) {
+      comments[index].replies.push({ user: userName, text: replyText });
+      renderComments();
+    }
+  }
+  function deleteComment(index) {
+    comments.splice(index, 1);
+    renderComments();
+  }
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      renderComments();
+    }
+  }
+  function nextPage() {
+    if (currentPage * commentsPerPage < comments.length) {
+      currentPage++;
+      renderComments();
+    }
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
